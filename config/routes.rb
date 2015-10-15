@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root 'talker#index'
+  
+  get '/learn' => 'learn#learn'
+  
+  post '/create' => 'learn#create'
+  
+  post '/talker' => 'talker#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

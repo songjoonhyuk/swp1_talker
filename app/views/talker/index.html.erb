@@ -1,0 +1,17 @@
+<h1>심심이입니다.</h1>
+<div class="main-page">
+  <a href="/learn">
+    <button class="learn-button">가르치러 가기</button>
+  </a> <br>
+  
+  <% @chats.each do |p|%>
+  <li><%=p.talker%> : <%=p.content%></li>
+  <% end %>
+  
+  
+
+  <%= form_tag '/talker', method: 'post', class: "chat-form" do %>
+    <input type="text" placeholder="입력..." name="ask">
+    <input type="submit" value="전송">
+  <% end %>
+</div>
